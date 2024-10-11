@@ -1,8 +1,8 @@
 import streamlit as st
-from .projektas.Prideti_knyga import prideti_knyga
-from .projektas.biblioteka import Biblioteka
-from .projektas.Isimti_knyga import isimti_knyga
-from .projektas.Knygos import Knyga
+from Prideti_knyga import prideti_knyga
+from biblioteka import Biblioteka
+from Isimti_knyga import isimti_knyga
+from Knygos import Knyga
 
 
 def main():

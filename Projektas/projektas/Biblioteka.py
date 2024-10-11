@@ -1,6 +1,6 @@
 import pickle
 from datetime import datetime, timedelta
-from Projektas.projektas.Knygos import Knyga
+from Knygos import Knyga
 
 class Biblioteka:
     def __init__(self):

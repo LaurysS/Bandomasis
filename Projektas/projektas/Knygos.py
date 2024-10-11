@@ -1,4 +1,3 @@
-import pickle
 
 class Knyga:
     def __init__(self, pavadinimas, autorius, isleidimo_metai, zanras):
