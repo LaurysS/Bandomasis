@@ -1,4 +1,4 @@
-from Biblioteka import Biblioteka
+from biblioteka import Biblioteka
 
 def isimti_knyga():
     biblioteka = Biblioteka()

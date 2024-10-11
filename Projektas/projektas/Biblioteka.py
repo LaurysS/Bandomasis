@@ -1,6 +1,6 @@
 import pickle
 from datetime import datetime, timedelta
-from Knyga import Knyga
+from Projektas.projektas.Knygos import Knyga
 
 class Biblioteka:
     def __init__(self):
@@ -39,6 +39,15 @@ class Biblioteka:
                 self.issaugoti_knygas()
                 return
         print("Knyga nepraimta.")
+        
+    def perziureti_visas(self):
+        for knyga in self.knygos:
+            print(knyga)
+
+    def perziureti_veluojancias(self):
+        for skaitytojas, knyga in self.paimtos_knygos.items():
+            if knyga.grazinimo_data < datetime.date.today():
+                print(f"Knyga '{knyga.pavadinimas}' by {knyga.autorius} is overdue for {skaitytojas}.")
 
     def issaugoti_knygas(self):
         with open("knygos.pkl", "wb") as f:

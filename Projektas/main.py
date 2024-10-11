@@ -1,7 +1,9 @@
 import streamlit as st
-from Biblioteka import Biblioteka
-from Prideti_knyga import prideti_knyga
-from Isimti_knyga import isimti_knyga
+from .projektas.Prideti_knyga import prideti_knyga
+from .projektas.biblioteka import Biblioteka
+from .projektas.Isimti_knyga import isimti_knyga
+from .projektas.Knygos import Knyga
+
 
 def main():
     st.title("Biblioteka")
@@ -24,9 +26,9 @@ def main():
             elif choice == "Išimti knygą":
                 isimti_knyga()
             elif choice == "Peržiūrėti visas knygas":
-                biblioteka.view_all_books()
+                biblioteka.perziureti_visas()
             elif choice == "Peržiūrėti visas vėluojančias knygas":
-                biblioteka.view_overdue_books()
+                biblioteka.perziureti_veluojancias()
             elif choice == "Išeiti":
                 st.write("Sėkmingai išėjote iš sistema.")
         elif username == "skaitytojas" and password == "slaptazodis":
@@ -46,9 +48,9 @@ def main():
                 skaitytojas = st.text_input("Įveskite skaitytojo kortelės numerį:")
                 biblioteka.grazinti_knyga(pavadinimas, skaitytojas)
             elif choice == "Peržiūrėti visas knygas":
-                biblioteka.view_all_books()
+                biblioteka.perziureti_visas()
             elif choice == "Peržiūrėti visas vėluojančias knygas":
-                biblioteka.view_overdue_books()
+                biblioteka.perziureti_veluojancias()
             elif choice == "Išeiti":
                 st.write("Sėkmingai išėjote iš sistema.")
         else:
